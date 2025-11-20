@@ -7,7 +7,7 @@ Pipeline to Train Video LoRas
 
 ---
 
-## 🚀 Overview
+##  Overview
 
 **wan21-lora-dataprep** is a modular data preparation toolkit for building custom video training datasets.  
 It runs on **Windows 11** and **Fedora Linux (WSL)** and supports both **standalone scripts** and a **unified Typer CLI**.
@@ -16,16 +16,15 @@ It runs on **Windows 11** and **Fedora Linux (WSL)** and supports both **standal
 
 | Step | Description | Tools Used |
 |------|--------------|-------------|
-| 1️⃣ Rip | Extract videos from DVD/ISO to `.mkv` | MakeMKV |
-| 2️⃣ Detect Scenes | Timestamp each scene | PySceneDetect |
-| 3️⃣ Split Scenes | Split into clips using timestamps | MKVToolNix / FFmpeg |
-| 4️⃣ Review | Stage for human review (keep/reject) | Custom script |
+| 1 Detect Scenes | Timestamp each scene | PySceneDetect |
+| 2 Split Scenes | Split into clips using timestamps | MKVToolNix / FFmpeg |
+| 3 Review | Stage for human review (keep/reject) | Custom script |
 
 After review, the **`keep/`** folder is used for GPU upscaling and LoRA dataset creation (Phase 2).
 
 ---
 
-## 🧰 Requirements
+##  Requirements
 
 - Python ≥ 3.10  
 - [MakeMKV](https://www.makemkv.com/)  
@@ -36,7 +35,7 @@ After review, the **`keep/`** folder is used for GPU upscaling and LoRA dataset 
 
 ---
 
-## ⚙️ Environment Setup
+##  Environment Setup
 
 ### Windows (PowerShell)
 
