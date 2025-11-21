@@ -25,7 +25,7 @@ $cfg = Get-Content $ConfigYml -Raw
 $threshold     = [regex]::Match($cfg, "threshold:\s*([0-9.]+)").Groups[1].Value
 $min_scene_len = [regex]::Match($cfg, "min_scene_len:\s*([0-9]+)").Groups[1].Value
 
-$videos = Get-ChildItem -Path $SourcesDir -Include *.mp4,*.mkv -File -Recurse
+$videos = Get-ChildItem -Path $SourcesDir -Include *.mkv -File -Recurse
 if (-not $videos) { Write-Host "No input videos in $SourcesDir" -ForegroundColor Yellow; exit 1 }
 
 foreach ($vid in $videos) {
